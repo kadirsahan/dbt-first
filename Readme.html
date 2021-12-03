@@ -1,0 +1,36 @@
+dbt learning 
+
+su - postgres
+
+psql postgres -h 127.0.0.1 -d db1 -f /hr/hr_schema.sql
+
+psql postgres -h 127.0.0.1 -d db1 -f /hr/hr_data.sql
+
+psql "dbname=mydatabase options=--search_path=myschema" -a -f myfile.sql
+
+880acb2e73a1:~$ psql
+
+postgres=# \connect db1;
+
+You are now connected to database "db1" as user "postgres".
+               
+db1=# CREATE SCHEMA myschema;
+CREATE SCHEMA
+db1=# \dn
+   List of schemas
+   Name   |  Owner
+----------+----------
+ dbt_dev  | postgres
+ myschema | postgres
+ public   | postgres
+(3 rows)
+
+db1=#
+
+
+http://www.sqlines.com/online
+
+oracle hr schema in postgres , some constraints are comments are not available
+
+https://github.com/bbrumm/oracle_sample
+
