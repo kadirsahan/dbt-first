@@ -11,6 +11,17 @@ models:
           - unique
           - not_null
 
+  - name: emp_view
+
+  - name: emp_deps
+    description: "employees departments"
+    columns:
+      - name: employee_id
+        description: "employees id"
+        tests:
+          - unique
+          - not_null
+
   - name: my_second_dbt_model
     description: "A starter dbt model"
     columns:
